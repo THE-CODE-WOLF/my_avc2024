@@ -1,4 +1,5 @@
 
+#Replace with your file path below
 fileName = "C:/Users/kevin/PycharmProjects/AdventOfCode2024/1.1.txt"
 
 with open(fileName, encoding="utf-8") as file:

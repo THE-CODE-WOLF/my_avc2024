@@ -1,6 +1,7 @@
-import re
-import time
 
+import re
+
+#Replace with your file path below
 fileName = "C:/Users/woods/PycharmProjects/AdventOfCode2024/2.txt"
 
 with open(fileName, encoding="utf-8") as file:
@@ -18,9 +19,6 @@ for the_line in lines:
 
     for num in string_nums:
         nums.append(int(num))
-
-    #print(string_nums)
-    #print(nums)
 
     modded_nums = nums
 
