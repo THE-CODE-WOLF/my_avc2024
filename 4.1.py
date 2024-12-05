@@ -68,6 +68,7 @@ for line_num, line in enumerate(lines):
                 lines[line_num + 2][num + 2] == 'M' and lines[line_num + 3][num + 3] == 'X':
             final_sum += 1
 
+
 #        if item == 'X' and num < len(line) - 4:
 #            if line[num + 1] == 'M':
 #                if line[num + 2] == 'A':
