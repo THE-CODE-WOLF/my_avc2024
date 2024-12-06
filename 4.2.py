@@ -10,59 +10,38 @@ test_lines = [
     ".A..",
     "S.S.",
     ".A..",
-    "M.M."
+    "M.M.",
+    "M.S.",
+    ".A..",
+    "M.S.",
+    "S.M.",
+    ".A..",
+    "S.M."
 ]
 
 grid = []
 #length = len(lines)
-length = len(test_lines)
+length = len(lines)
 
 final_sum = 0
 
-for line_num, line in enumerate(test_lines):
+for line_num, line in enumerate(lines):
     for num, item in enumerate(line):
 
         if line_num > 0 and line_num < length - 1 and num > 0 and num < len(line) - 1 and item == 'A':
-            print(item)
+            # print(item)
 
+            if lines[line_num - 1][num - 1] == 'M' and lines[line_num + 1][num + 1] == 'S' and lines[line_num - 1][num + 1] == 'M' and lines[line_num + 1][num - 1] == 'S':
+                final_sum += 1
 
+            if lines[line_num - 1][num - 1] == 'S' and lines[line_num + 1][num + 1] == 'M' and lines[line_num - 1][num + 1] == 'S' and lines[line_num + 1][num - 1] == 'M':
+                final_sum += 1
 
-#        # Horizontal
-#        if line[num:num + 4] == 'XMAS':
-#            final_sum += 1
-#
-#        # Horizontal backwards
-#        if line[num:num + 4] == 'SAMX':
-#            final_sum += 1
-#
-#        # Vertical
-#        if item == 'X' and line_num < length - 3 and lines[line_num + 1][num] == 'M' and lines[line_num + 2][
-#                    num] == 'A' and lines[line_num + 3][num] == 'S':
-#            final_sum += 1
-#
-#        # Vertical backwards
-#        if item == 'S' and line_num < length - 3 and lines[line_num + 1][num] == 'A' and lines[line_num + 2][
-#                    num] == 'M' and lines[line_num + 3][num] == 'X':
-#            final_sum += 1
-#
-#        # Diagonal
-#        if item == 'X' and line_num < length - 3 and num < len(line) - 3 and lines[line_num + 1][num + 1] == 'M' and \
-#                lines[line_num + 2][num + 2] == 'A' and lines[line_num + 3][num + 3] == 'S':
-#            final_sum += 1
-#
-#        # Diagonal backwards
-#        if item == 'S' and line_num < length - 3 and num < len(line) - 3 and lines[line_num + 1][num + 1] == 'A' and \
-#                lines[line_num + 2][num + 2] == 'M' and lines[line_num + 3][num + 3] == 'X':
-#            final_sum += 1
-#
-#        # Anti-diagonal
-#        if item == 'X' and line_num < length - 3 and num >= 3 and lines[line_num + 1][num - 1] == 'M' and \
-#                lines[line_num + 2][num - 2] == 'A' and lines[line_num + 3][num - 3] == 'S':
-#            final_sum += 1
-#
-#        # Anti-diagonal backwards
-#        elif item == 'S' and line_num < length - 3 and num >= 3 and lines[line_num + 1][num - 1] == 'A' and \
-#                lines[line_num + 2][num - 2] == 'M' and lines[line_num + 3][num - 3] == 'X':
-#            final_sum += 1
+            if lines[line_num - 1][num - 1] == 'M' and lines[line_num + 1][num + 1] == 'S' and lines[line_num - 1][num + 1] == 'S' and lines[line_num + 1][num - 1] == 'M':
+                final_sum += 1
+
+            if lines[line_num - 1][num - 1] == 'S' and lines[line_num + 1][num + 1] == 'M' and lines[line_num - 1][num + 1] == 'M' and lines[line_num + 1][num - 1] == 'S':
+                final_sum += 1
+
 
 print(final_sum)
