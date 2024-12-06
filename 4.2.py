@@ -1,5 +1,5 @@
 
-#Replace with your file path below
+# Replace with your file path below
 fileName = "C:/Users/woods/PycharmProjects/my_avc2024/Puzzles/4.txt"
 
 with open(fileName, encoding="utf-8") as file:
