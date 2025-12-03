@@ -1,7 +1,7 @@
 import re
 
 #Replace with your file path below
-fileName = "C:/Users/woods/PycharmProjects/AdventOfCode2024/2.txt"
+fileName = "PycharmProjects/AdventOfCode2024/2.txt"
 
 with open(fileName, encoding="utf-8") as file:
     lines = [line.rstrip() for line in file]
